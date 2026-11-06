@@ -46,6 +46,10 @@ The script prompts once for Splunk credentials at runtime; they are never writte
 - Keep `-dedup true` so that resuming and windows that share a boundary do not write duplicate summary data.
 - Credentials are passed with `-auth` and are briefly visible in `ps` output for each run. On a shared host, consider an authenticated session instead.
 
+## Related
+
+- [splunk/rest-fill-summary-index](https://github.com/splunk/rest-fill-summary-index) is Splunk's REST API counterpart, `fill_summary_index_rest.py`. It runs remotely against the management port (8089), supports Splunk Cloud via `-host`, and accepts a session key (`-sk`) instead of `-auth`. This project targets the `fill_summary_index.py` bundled in `$SPLUNK_HOME/bin` on Splunk Enterprise.
+
 ## Version history
 
 | Version | Date | Changes |
